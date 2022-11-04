@@ -12,6 +12,7 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import LoginScreen from './src/screens/loginScreen/';
 import StartScreen from './src/screens/startScreen';
+import Navigation from './src/navigation';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -19,8 +20,8 @@ import StartScreen from './src/screens/startScreen';
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <StartScreen/>
-   
+      
+   <Navigation/>
     </SafeAreaView>
   );
 };
@@ -28,6 +29,7 @@ const App = () => {
 const styles = StyleSheet.create({
   root: {
     flex:1,
+
    
   },
 });
