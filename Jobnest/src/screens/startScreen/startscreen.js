@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable prettier/prettier */
 
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-hooks/rules-of-hooks */
@@ -8,16 +10,24 @@ import {View, Button ,Text, Image, StyleSheet, useWindowDimensions} from 'react-
 
 import React from 'react';
 import Logo from '../../../assets/images/jobnestLogo.jpg';
+import CustomButton from '../../components/CustomButtons/CustomButton';
 const startscreen = () => {
 const {Height} = useWindowDimensions();
+const onsGetStartedPressed= ()=>{
+  console.warn("get started")
+}
+
+
 
   return (
     <View style={Styles.root}>
       <Image source={Logo} style={[Styles.logo  ,{Height:  Height*0.2}]} resizeMode="contain" />
       <Text style={Styles.baseText}>Join us & Explore Thousend of</Text>
-
       <Text style={Styles.baseTex2}>  Greate Job</Text>
-      <Button color="#3E4F88"    title="Get Started"   />
+     
+
+     <CustomButton text="Get Started" onPress={onsGetStartedPressed} />
+     
     </View>
   
   );
