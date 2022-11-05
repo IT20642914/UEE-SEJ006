@@ -23,6 +23,7 @@ const styles=StyleSheet.create({
         marginVertical:10,
         alignItems:'center',
         borderRadius:10,
+        marginTop:50,
 
 
 },

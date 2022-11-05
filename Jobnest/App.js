@@ -14,6 +14,7 @@ import LoginScreen from './src/screens/loginScreen/';
 import StartScreen from './src/screens/startScreen';
 import Navigation from './src/navigation';
 
+
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
 

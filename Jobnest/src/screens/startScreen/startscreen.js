@@ -16,10 +16,11 @@ const Startscreen = () => {
 const {Height} = useWindowDimensions();
 
 const navigation =useNavigation();
+
 const onsGetStartedPressed= ()=>{
   console.warn("get started")
 
-navigation.navigate('LoginScreen');
+navigation.navigate('LoginType');
 
 }
 
