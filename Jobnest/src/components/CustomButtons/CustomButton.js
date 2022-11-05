@@ -17,12 +17,13 @@ const CustomButton = ({onPress,text,type="PRIMARY"}) => {
 const styles=StyleSheet.create({
 
     container:{
-       
+
         padding:10,
         width: '80%',
         marginVertical:10,
         alignItems:'center',
         borderRadius:10,
+        marginTop:50,
 
 
 },

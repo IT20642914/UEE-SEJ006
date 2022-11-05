@@ -5,21 +5,29 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-hooks/rules-of-hooks */
 //rnfe
-import {View, Button ,Text, Image, StyleSheet, useWindowDimensions} from 'react-native';
+import {View, Button ,Text, Image, StyleSheet, useWindowDimensions, ScrollView} from 'react-native';
 
 
 import React from 'react';
 import Logo from '../../../assets/images/jobnestLogo.jpg';
 import CustomButton from '../../components/CustomButtons/CustomButton';
-const startscreen = () => {
+import { useNavigation } from '@react-navigation/native';
+const Startscreen = () => {
 const {Height} = useWindowDimensions();
+
+const navigation =useNavigation();
+
 const onsGetStartedPressed= ()=>{
   console.warn("get started")
+
+navigation.navigate('LoginType');
+
 }
 
 
 
   return (
+   
     <View style={Styles.root}>
       <Image source={Logo} style={[Styles.logo  ,{Height:  Height*0.2}]} resizeMode="contain" />
       <Text style={Styles.baseText}>Join us & Explore Thousend of</Text>
@@ -29,12 +37,13 @@ const onsGetStartedPressed= ()=>{
      <CustomButton text="Get Started" onPress={onsGetStartedPressed} />
      
     </View>
-  
+   
   );
 
 };
 const Styles = StyleSheet.create({
   root: {
+    backgroundColor:'white',
     justifyContent:'center',
     alignItems: 'center',
   },
@@ -59,4 +68,4 @@ const Styles = StyleSheet.create({
   }
   
 });
-export default startscreen;
+export default Startscreen;
