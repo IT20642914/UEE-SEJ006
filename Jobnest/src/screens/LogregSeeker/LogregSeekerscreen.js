@@ -30,6 +30,10 @@ const LogregSeekerscreen = () => {
   }
 
 
+
+
+  
+
   return (
     <View style={Styles.root}>
     <Text style={Styles.baseText}>Job Seeker</Text>

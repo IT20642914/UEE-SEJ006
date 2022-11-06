@@ -18,7 +18,7 @@ const {Height} = useWindowDimensions();
 const navigation =useNavigation();
 
 const onsGetStartedPressed= ()=>{
-  console.warn("get started")
+
 
 navigation.navigate('LoginType');
 
@@ -42,7 +42,7 @@ navigation.navigate('LoginType');
 
 };
 const Styles = StyleSheet.create({
-  root: {
+  root: { height:"100%",
     backgroundColor:'white',
     justifyContent:'center',
     alignItems: 'center',

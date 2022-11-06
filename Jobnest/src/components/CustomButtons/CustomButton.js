@@ -19,11 +19,12 @@ const styles=StyleSheet.create({
     container:{
 
         padding:10,
-        width: '80%',
+        width: '90%',
         marginVertical:10,
         alignItems:'center',
         borderRadius:10,
-        marginTop:50,
+        marginTop:10,
+        marginHorizontal:20,
 
 
 },
@@ -34,6 +35,7 @@ container_PRIMARY:{
 container_TERTIARY:{
   
 },
+
     text:{
         fontWeight:'bold',
         color:'white',
