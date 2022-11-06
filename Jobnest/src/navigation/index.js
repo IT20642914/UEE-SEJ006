@@ -32,6 +32,7 @@ const Navigation = () => {
         <Stack.Screen name="SeekerReg"options={{headerShown: false}} component={RegisterSeekerscreen} ></Stack.Screen>
         <Stack.Screen name="ProviderReg"options={{headerShown: false}} component={RegisteProviderScreen} ></Stack.Screen>
         <Stack.Screen name="ProviderLOG"options={{headerShown: false}} component={LoginProviderscreen} ></Stack.Screen>  
+        
 
     </Stack.Navigator>
     </NavigationContainer>
