@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { View, Text,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView} from 'react-native'
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable prettier/prettier */
+import { View, Text,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
 import Logo from '../../../assets/images/undraw_job_hunt_re_q203.png';
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
@@ -24,7 +26,7 @@ const LoginSeekerScreen = () => {
 
     <View style={Styles.root}>
       
-     <ScrollView >
+     <ScrollView  showsVerticalScrollIndicator={false}>
       <Text style={Styles.baseText}>Welcome Back</Text>
       <Text style={Styles.baseTex2}>  Welcome back to Jobnest. Have a good time</Text>
      
@@ -57,31 +59,18 @@ type='TERTIARY'
   <View  />
   <View style={{flex: 1,}} >
 
-    <CustomButton text=" Login with facebook" /> 
+  <View style={ Styles.container}>
+  <TouchableOpacity style={Styles.button}  onPress={()=>{alert("you clicked me")}}>
+          <Image source={require("../../../assets/images/facebook.png")}  style={{ margin:20,marginBottom:10,width:40,height:40,borderRadius:1000}}/>
+        </TouchableOpacity>
 
+        
+</View>
   </View>
-  <View style={{flex: 1,}} ><CustomButton  text="Login Google" /></View>
-</View>
-
-
-
-
-
-
-<View style={{ flexDirection: "row"}}>
-  <View style={{ paddingLeft:62, row: .9 }}>
+  <TouchableOpacity style={Styles.button} onPress={()=>{alert("you clicked me")}}>
+          <Image source={require("../../../assets/images/google.png")}  style={{ margin:10,paddingLeft:62,width:60,height:60,borderRadius:1000}}/>
+        </TouchableOpacity>
     
-<CustomButton 
-text="Dont have a account "
-type='TERTIARY'
-
-/></View>
-
-
-
-
-<Text style={{    fontSize: 12,paddingTop:23, color:'#3E4F88',}}>RGISTER</Text>
-
 </View>
 
 
@@ -89,10 +78,17 @@ type='TERTIARY'
 
 
 
+  <View style={{marginTop:60,}}>
+    
+  <TouchableOpacity  style={Styles.touchbl} onPress={()=>{alert("you clicked me")}}>
+        <Text style={Styles.baseTex23} >Dont have a Account </Text>
+        <Text  style={Styles.baseTex2} >Click Here </Text>
+   
+        </TouchableOpacity>
+    
 
 
-
-
+</View>
 
 
 
@@ -114,6 +110,12 @@ const Styles = StyleSheet.create({
      height:"100%",
      justifyContent:'center',
      alignItems: 'center',
+   },
+   touchbl:{
+    flexDirection: 'row',
+    marginLeft:70,
+  marginTop:58,
+
    },
   
    
@@ -141,7 +143,26 @@ const Styles = StyleSheet.create({
   input:{
 marginTop:70,
   },
-  
+  container: {
+flex:1,
+  backgroundColor: '#fff',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+button: {
+  flex:1,
+  borderRadius: 1000,
+  padding: 10,
+marginLeft:10,
+  height:10,
+  width:10,
+  shadowColor: '#303838',
+  // shadowOffset: { width: 0, height: 1 },
+  shadowRadius: 10,
+  shadowOpacity: 0.35,
+},
+
+
     
 });
 

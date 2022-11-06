@@ -2,7 +2,7 @@
 /* eslint-disable eol-last */
 /* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
-import { View, Text,Image ,StyleSheet,useWindowDimensions} from 'react-native'
+import { View, Text,Image ,StyleSheet,useWindowDimensions,TouchableOpacity} from 'react-native'
 import Logo from '../../../assets/images/undraw_job_hunt_re_q203.png';
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
@@ -41,6 +41,9 @@ const LogregSeekerscreen = () => {
 
    <CustomButton text="LOGIN" onPress={onLOGINPressed} />
    <CustomButton text="REGISTER" onPress={onsGetReGdPressed} />
+
+   
+
 </View>
 )
 }
@@ -69,6 +72,25 @@ root: {
     fontWeight: 'bold',
  
 },
+container: {
+  flex: 1,
+  backgroundColor: '#fff',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+button: {
+
+  borderRadius: 10000,
+  padding: 10,
+
+  height:10,
+  width:10,
+  shadowColor: '#303838',
+  // shadowOffset: { width: 0, height: 1 },
+  shadowRadius: 10,
+  shadowOpacity: 0.35,
+},
+
 
   
 

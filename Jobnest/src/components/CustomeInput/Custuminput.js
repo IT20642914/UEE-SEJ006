@@ -27,10 +27,10 @@ const Styles = StyleSheet.create({
  
     width:"100%",
     borderRadius:5,
-    borderColor:'#dce0ef',
+    borderColor:'#cbd1e7',
     paddingHorizontal:10,
     marginVertical:.9,
-    borderWidth:1,
+    borderWidth:3,
     marginTop:27,
 
   },

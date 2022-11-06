@@ -17,7 +17,7 @@ const LoginTypescreen = () => {
 
 
   const onJobseekerPressed= ()=>{
-    console.warn("get started")
+   
   
   navigation.navigate('SeekerRegLOG');
   
@@ -25,7 +25,7 @@ const LoginTypescreen = () => {
 
 
   const onJobProviderPressed= ()=>{
-    console.warn("get started")
+   
   
   navigation.navigate('ProviderRegLOG');
   
