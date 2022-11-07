@@ -1,6 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { View, Text,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView} from 'react-native'
-import Logo from '../../../assets/images/undraw_job_hunt_re_q203.png';
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable prettier/prettier */
+import { View, Text,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
+import Logo from '../../../assets/images/jobeseeker.png';
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import React,{useState} from 'react'
@@ -24,15 +26,16 @@ const LoginSeekerScreen = () => {
 
     <View style={Styles.root}>
       
-     <ScrollView >
+     <ScrollView  showsVerticalScrollIndicator={false}>
       <Text style={Styles.baseText}>Welcome Back</Text>
-      <Text style={Styles.baseTex2}>  Welcome back to Jobnest. Have a good time</Text>
+      <Text style={Styles.baseTex2}>  Welcome Back To Jobnest. Have A Good Time</Text>
      
-         <ImageBackground source={Logo} style={[Styles.logo  ,{Height:  Height *0.1}]} resizeMode="center" >
-         
-         <Custuminput   placeholder='email' value={email} setvalue={setEmail} />
+         <ImageBackground source={Logo} style={[Styles.logo  ,{Height:  Height *0.12}]} resizeMode="cover" >
+   
+         <Custuminput    placeholder='Email' value={email} setvalue={setEmail} />
+ 
          <Custuminput  placeholder='Password' value={password} setvalue={setPassword} secureTextEntry  />
-           
+        
            
          </ImageBackground>
          <CustomButton text="Login"  />
@@ -57,31 +60,18 @@ type='TERTIARY'
   <View  />
   <View style={{flex: 1,}} >
 
-    <CustomButton text=" Login with facebook" /> 
+  <View style={ Styles.container}>
+  <TouchableOpacity style={Styles.button}  onPress={()=>{alert("you clicked me")}}>
+          <Image source={require("../../../assets/images/facebook.png")}  style={{ margin:20,marginBottom:10,width:40,height:40,borderRadius:1000}}/>
+        </TouchableOpacity>
 
+        
+</View>
   </View>
-  <View style={{flex: 1,}} ><CustomButton  text="Login Google" /></View>
-</View>
-
-
-
-
-
-
-<View style={{ flexDirection: "row"}}>
-  <View style={{ paddingLeft:62, row: .9 }}>
+  <TouchableOpacity style={Styles.button} onPress={()=>{alert("you clicked me")}}>
+          <Image source={require("../../../assets/images/google.png")}  style={{ margin:10,paddingLeft:62,width:60,height:60,borderRadius:1000}}/>
+        </TouchableOpacity>
     
-<CustomButton 
-text="Dont have a account "
-type='TERTIARY'
-
-/></View>
-
-
-
-
-<Text style={{    fontSize: 12,paddingTop:23, color:'#3E4F88',}}>RGISTER</Text>
-
 </View>
 
 
@@ -89,17 +79,18 @@ type='TERTIARY'
 
 
 
+  <View style={{marginTop:60,}}>
+    
+  <TouchableOpacity  style={Styles.touchbl} onPress={()=>{alert("you clicked me")}}>
+        <Text style={Styles.baseTex1} >Dont have a Account </Text>
+        <Text  style={Styles.click} >Click Here </Text>
+   
+        </TouchableOpacity>
+    
 
 
-
-
-
-
-
-
-
-
-         
+</View>
+        
 </ScrollView>
         
 
@@ -115,16 +106,40 @@ const Styles = StyleSheet.create({
      justifyContent:'center',
      alignItems: 'center',
    },
-  
+   touchbl:{
+    flexDirection: 'row',
+justifyContent:'center',
+  // marginLeft:32,
+  // marginRight:10,
+    marginTop:20,
+
+   },
+   baseTex1:{
+   
+
+
+   },
+   click:{
+
+    textAlign:'center',
+    fontSize: 14, 
+    color: '#3E4F88',
+
+    marginBottom:10,
+
+   },
    
    logo: {
-  
-     height: 250,
-     width: 370,
+   
+    justifyContent:'center',
+    width:390,
+    height:390,
+  maxWidth:'100%',
+  maxHeight:'100%',
    },
    baseText:{  
     marginTop:60,
-    paddingLeft:70,
+    textAlign:'center',
     justifyContent:'center',
      fontSize: 32,
      color: '#3E4F88',
@@ -133,7 +148,9 @@ const Styles = StyleSheet.create({
   },
  
   baseTex2:{ 
-    paddingLeft:30,
+
+  
+   textAlign:'center',
     fontSize: 14, 
     color: '#3E4F88',
     paddingBottom:70,
@@ -141,7 +158,27 @@ const Styles = StyleSheet.create({
   input:{
 marginTop:70,
   },
+  container: {
+flex:1,
+  backgroundColor: '#fff',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+button: {
   
+  flex:1,
+  borderRadius: 1000,
+  padding: 10,
+marginLeft:10,
+  height:10,
+  width:10,
+  shadowColor: '#303838',
+  // shadowOffset: { width: 0, height: 1 },
+  shadowRadius: 10,
+  shadowOpacity: 0.35,
+},
+
+
     
 });
 

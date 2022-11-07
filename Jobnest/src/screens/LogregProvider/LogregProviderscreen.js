@@ -5,7 +5,7 @@
 
 import { View, Text,Image ,StyleSheet,useWindowDimensions} from 'react-native'
 import React from 'react'
-import Logo from '../../../assets/images/undraw_job_offers_re_634p.png';
+import Logo from '../../../assets/images/jobprovider.png';
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 const LogregProviderscreen = () => {
@@ -60,9 +60,9 @@ const Styles = StyleSheet.create({
         marginLeft:60,
         marginTop:5,
      
-        width: '70%',
-        maxWidth:300,
-        maxHeight:250,
+        width: '100%',
+        maxWidth:400,
+        maxHeight:350,
     
     
       },

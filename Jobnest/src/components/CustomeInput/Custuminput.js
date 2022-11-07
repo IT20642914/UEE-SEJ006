@@ -27,15 +27,23 @@ const Styles = StyleSheet.create({
  
     width:"100%",
     borderRadius:5,
-    borderColor:'#dce0ef',
+    borderColor:'#cbd1e7',
     paddingHorizontal:10,
     marginVertical:.9,
-    borderWidth:1,
+    borderWidth:3,
     marginTop:27,
+    background:'transparent',
+    opacity: .7,
+
 
   },
   input:{
     color:'#3E4F88',
+    fontWeight:'bold',
+
+
+ 
+  
   }
 
 
