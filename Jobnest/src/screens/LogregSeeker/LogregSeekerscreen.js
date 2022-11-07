@@ -3,7 +3,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
 import { View, Text,Image ,StyleSheet,useWindowDimensions,TouchableOpacity} from 'react-native'
-import Logo from '../../../assets/images/undraw_job_hunt_re_q203.png';
+import Logo from '../../../assets/images/jobeseeker.png';
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react'
@@ -37,7 +37,7 @@ const LogregSeekerscreen = () => {
   return (
     <View style={Styles.root}>
     <Text style={Styles.baseText}>Job Seeker</Text>
-   <Image source={Logo} style={[Styles.logo  ,{Height:  Height *0.1}]} resizeMode="contain" />
+   <Image source={Logo} style={[Styles.logo  ,{Height:  Height *0.1}]} resizeMode="cover" />
 
    <CustomButton text="LOGIN" onPress={onLOGINPressed} />
    <CustomButton text="REGISTER" onPress={onsGetReGdPressed} />
@@ -50,18 +50,20 @@ const LogregSeekerscreen = () => {
 const Styles = StyleSheet.create({
 root: {
    backgroundColor:'white',
-
+   height:"100%",
    alignItems: 'center',
+   
  },
 
  
  logo: {
-   marginLeft:60,
-   marginTop:5,
+  marginTop:40,
+  justifyContent:'center',
+  width:390,
+  height:390,
+maxWidth:'100%',
+maxHeight:'100%',
 
-   width: '70%',
-   maxWidth:300,
-   maxHeight:250,
 
 
  },

@@ -32,10 +32,18 @@ const Styles = StyleSheet.create({
     marginVertical:.9,
     borderWidth:3,
     marginTop:27,
+    background:'transparent',
+    opacity: .7,
+
 
   },
   input:{
     color:'#3E4F88',
+    fontWeight:'bold',
+
+
+ 
+  
   }
 
 
