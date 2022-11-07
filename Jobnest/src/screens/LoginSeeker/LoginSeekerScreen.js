@@ -90,13 +90,7 @@ type='TERTIARY'
 
 
 </View>
-
-
-
-
-
-
-         
+        
 </ScrollView>
         
 
