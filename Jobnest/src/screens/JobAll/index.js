@@ -1,2 +1,2 @@
 /* eslint-disable prettier/prettier */
-export {default} from "./startscreen"
+export {default} from "./JobAll"

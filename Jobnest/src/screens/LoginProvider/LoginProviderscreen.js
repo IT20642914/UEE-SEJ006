@@ -105,7 +105,7 @@ const Styles = StyleSheet.create({
   },
   touchbl:{
    flexDirection: 'row',
-justifyContent:'center',
+   justifyContent:'center',
  // marginLeft:32,
  // marginRight:10,
    marginTop:20,

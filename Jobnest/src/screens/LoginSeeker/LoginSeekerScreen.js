@@ -12,6 +12,11 @@ const LoginSeekerScreen = () => {
   const {Height} = useWindowDimensions();
 
   const navigation =useNavigation();
+  const onsGetStartedPressed= ()=>{
+    navigation.navigate('JobAll');
+
+}
+
  
  const [email,setEmail] =useState('');
  const [password,setPassword] =useState('');
@@ -38,7 +43,7 @@ const LoginSeekerScreen = () => {
         
            
          </ImageBackground>
-         <CustomButton text="Login"  />
+         <CustomButton text="Login" onPress={onsGetStartedPressed} />
 
          
 

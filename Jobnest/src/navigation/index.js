@@ -14,6 +14,8 @@ import LoginProviderscreen from '../screens/LoginProvider/LoginProviderscreen';
 import LoginSeekerScreen from '../screens/LoginSeeker/LoginSeekerScreen';
 import RegisterSeekerscreen from '../screens/RegisterSeeker/RegisterSeekerscreen';
 import RegisteProviderScreen from '../screens/RegisterProvider/RegisterProviderscreen';
+import JobAll from '../screens/JobAll/JobAll';
+//import JobList from '../screens/RegisterProvider/RegisterProviderscreen';
 
 
 
@@ -31,7 +33,8 @@ const Navigation = () => {
         <Stack.Screen name="seekerLOG"options={{headerShown: false}} component={LoginSeekerScreen} ></Stack.Screen>
         <Stack.Screen name="SeekerReg"options={{headerShown: false}} component={RegisterSeekerscreen} ></Stack.Screen>
         <Stack.Screen name="ProviderReg"options={{headerShown: false}} component={RegisteProviderScreen} ></Stack.Screen>
-        <Stack.Screen name="ProviderLOG"options={{headerShown: false}} component={LoginProviderscreen} ></Stack.Screen>  
+        <Stack.Screen name="ProviderLOG"options={{headerShown: false}} component={LoginProviderscreen} ></Stack.Screen> 
+        <Stack.Screen name="JobAll"options={{headerShown: false}} component={JobAll} ></Stack.Screen>  
         
 
     </Stack.Navigator>
