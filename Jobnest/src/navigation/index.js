@@ -14,16 +14,21 @@ import LoginProviderscreen from '../screens/LoginProvider/LoginProviderscreen';
 import LoginSeekerScreen from '../screens/LoginSeeker/LoginSeekerScreen';
 import RegisterSeekerscreen from '../screens/RegisterSeeker/RegisterSeekerscreen';
 import RegisteProviderScreen from '../screens/RegisterProvider/RegisterProviderscreen';
+import Forgetpass from '../screens/Forgetpasswordseeker/Forgetpass';
+import Forgetpasswordpro from '../screens/Forgetpasswordprovider/Forgetpasswordpro';
+import Adminpanel from '../screens/Adminpanel/Adminpanel';
+import Addjobs from '../screens/Addjobs/Addjobs';
+import ViewJobTypes from '../screens/ViewAllJobTypes/ViewJobTypes';
+import AddLocation from '../screens/AddLocation/AddLocation';
+import ViewAllLocations from '../screens/ViewAllLocations/ViewAllLocations';
 
-
-
-const Stack = createNativeStackNavigator();
+const Stack  = createNativeStackNavigator();
 const Navigation = () => {
   return (
     <NavigationContainer>
 
-    <Stack.Navigator >
-        <Stack.Screen name="StartScreen" options={{headerShown: false}} component={StartScreen} ></Stack.Screen>
+    <Stack.Navigator   screenOptions={{headerTitleAlign:'center',headerTintColor:'white',headerStyle:{backgroundColor:'#3E4F88'}}} >
+        {/* <Stack.Screen name="StartScreen" options={{headerShown: false}} component={StartScreen} ></Stack.Screen>
         <Stack.Screen name="LoginScreen"  component={LoginScreen} ></Stack.Screen>
         <Stack.Screen name="LoginType"options={{headerShown: false}} component={LoginType} ></Stack.Screen>
         <Stack.Screen name="SeekerRegLOG"options={{headerShown: false}} component={LogregSeekerscreen} ></Stack.Screen>
@@ -32,8 +37,13 @@ const Navigation = () => {
         <Stack.Screen name="SeekerReg"options={{headerShown: false}} component={RegisterSeekerscreen} ></Stack.Screen>
         <Stack.Screen name="ProviderReg"options={{headerShown: false}} component={RegisteProviderScreen} ></Stack.Screen>
         <Stack.Screen name="ProviderLOG"options={{headerShown: false}} component={LoginProviderscreen} ></Stack.Screen>  
-        
-
+        <Stack.Screen name="ForgetPw"options={{headerShown: false}} component={Forgetpass} ></Stack.Screen>  
+        <Stack.Screen name="Forgetpasswordpro"options={{headerShown: false}} component={Forgetpasswordpro} ></Stack.Screen>   */}
+        <Stack.Screen name="movetoAdminapanel"options={{ headerShown: false}} component={Adminpanel} ></Stack.Screen>  
+        <Stack.Screen name="ADD JOBS TYPES" component={Addjobs} ></Stack.Screen>  
+        <Stack.Screen name="VIEW ALL JOBS TYPES" component={ViewJobTypes} ></Stack.Screen>  
+        <Stack.Screen name="ADD LOCATIONS" component={AddLocation} ></Stack.Screen>  
+        <Stack.Screen name="VIEW ALL LOCATIONS" component={ViewAllLocations} ></Stack.Screen>  
     </Stack.Navigator>
     </NavigationContainer>
   );
