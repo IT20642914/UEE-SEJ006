@@ -1,12 +1,13 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable prettier/prettier */
-import { View, Text,SafeAreaView,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
+import { View, Text,SafeAreaView,Image, ToastAndroid,StyleSheet, StatusBar,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
 
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import React,{useState,useEffect } from 'react'
 import Custuminput from '../../components/Customeinput2/CustomeInput2';
+
 
 
 const Addjobs = () => {
@@ -15,7 +16,9 @@ const Addjobs = () => {
     const navigation =useNavigation();
 
     const onpressSave =()=>{
-      navigation.navigate('successfully Added! ');
+      
+      ToastAndroid.show(' Request sent successfully!', ToastAndroid.SHORT);
+       navigation.navigate('Successfully Added! ');
       
     
     }
@@ -73,6 +76,8 @@ const Styles = StyleSheet.create({
         alignContent:'center',
         borderRadius:20,
      },cardin:{
+     
+      paddingTop: StatusBar.currentHeight,
         alignContent:'center',
         justifyContent:'center',
         margin:30,

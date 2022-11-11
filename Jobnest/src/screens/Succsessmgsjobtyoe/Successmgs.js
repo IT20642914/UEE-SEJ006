@@ -25,7 +25,7 @@ const Successmgs = () => {
     <View style={Styles.card}>
             <View style={Styles.cardin}>
             <Image source={require("../../../assets/images/checkbox-303113.png")}  style={{ margin:10,width:250,height:250,borderRadius:1000}}/>
-            <Text style={Styles.baseTextH}> successfully Added!</Text>
+            <Text style={Styles.baseTextH}> Successfully Added!</Text>
             <Text style={Styles.baseTextH2}> Your Job  Type  has been added successfully.</Text>
        
         </View>

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { View, Text,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
+import { View, Text,Image ,StyleSheet,useWindowDimensions,ToastAndroid,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
 
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
@@ -7,6 +7,28 @@ import React,{useState} from 'react'
 import Custuminput from '../../components/Customeinput2/CustomeInput2';
 import { SearchBar } from 'react-native-screens';
 const ViewJobTypes = () => {
+   const navigation =useNavigation();
+   const onpressUpdat =()=>{
+      
+      ToastAndroid.show(' Update Request sent successfully!', ToastAndroid.SHORT);
+       navigation.navigate('Successfully Updated!');
+      
+    
+    }
+    const onpressDelete =()=>{
+      
+      ToastAndroid.show(' Delete Request sent successfully!', ToastAndroid.SHORT);
+       navigation.navigate('Successfully Deleted!');
+      
+    
+    }
+
+
+
+
+
+
+
 
     const [SearchBar,setSearchBar] =useState('');
   return (
@@ -24,8 +46,8 @@ const ViewJobTypes = () => {
       <View  style={Styles.datalist}>
 
  
-    <CustomButton text="Update"  type='UPDATE' />
-    <CustomButton text="Delete"  type='DELETE' /></View>
+    <CustomButton text="Update" onPress={ onpressUpdat}  type='UPDATE' />
+    <CustomButton text="Delete"  onPress={ onpressDelete}  type='DELETE' /></View>
     </View>
     </View>
 </View></View>

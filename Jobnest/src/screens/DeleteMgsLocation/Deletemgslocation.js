@@ -1,37 +1,41 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable prettier/prettier */
-import { View, Text,SafeAreaView,Image ,ToastAndroid,StyleSheet,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/jsx-no-undef */
+
+import { View, Text,SafeAreaView,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
 
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import React,{useState,useEffect } from 'react'
 import Custuminput from '../../components/Customeinput2/CustomeInput2';
+import Logo from '../../../assets/images/facebook.png';
 
-
-const AddLocation = () => {
-    const [AddLocation,setLocation] =useState('');
+const Deletemgslocation = () => {
+    const [jobtype,setJobtype] =useState('');
     const navigation =useNavigation();
+    const {Height} = useWindowDimensions();
+    const onpressback =()=>{
+        navigation.navigate('VIEW ALL LOCATIONS');
+
+      }
     
-  const onpressSave =()=>{
-
-   ToastAndroid.show(' Request sent successfully!', ToastAndroid.SHORT);
-   navigation.navigate('Successfully Added!');
-   
- 
- }
-
-
-  return (
+  
+    return (
     <View style={Styles.root}>
+    
     <View style={Styles.card}>
             <View style={Styles.cardin}>
-      
-         
-        <Custuminput    placeholder=' Add Job Location' value={AddLocation} setvalue={setLocation} />
-        <CustomButton text="Save"   onPress={ onpressSave} />
+            <Image source={require("../../../assets/images/checkbox-303113.png")}  style={{ margin:10,width:250,height:250,borderRadius:1000}}/>
+            <Text style={Styles.baseTextH}> Successfully Deleted!</Text>
+            <Text style={Styles.baseTextH2}> Location Has Been Delete Successfully.</Text>
+       
         </View>
-    </View></View>
+        
+    </View>
+    <CustomButton text="Back To View All  Locations"  onPress={ onpressback}  />
+   </View>
   
   )
 }
@@ -67,7 +71,7 @@ const Styles = StyleSheet.create({
         borderWidth:1,
         marginTop:50,
      backgroundColor:'#D9D9DA',
-        height:200,
+        height:400,
         width:'80%',
         alignContent:'center',
         borderRadius:20,
@@ -76,8 +80,20 @@ const Styles = StyleSheet.create({
         justifyContent:'center',
         margin:30,
      }
+    ,  baseTextH:{
+      textAlign:'center',
+      fontSize: 23,
+      color: '#3E4F88',
+       fontWeight: 'bold',
+ 
+    },baseTextH2:{
+textAlign:'center',
+      fontSize: 16,
+      color: '#3E4F88',
+    
+ 
+    },
     
       
    });
-
-export default AddLocation
+export default Deletemgslocation

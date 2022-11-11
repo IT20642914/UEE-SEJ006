@@ -23,7 +23,10 @@ import AddLocation from '../screens/AddLocation/AddLocation';
 import ViewAllLocations from '../screens/ViewAllLocations/ViewAllLocations';
 import Successmgs from '../screens/Succsessmgsjobtyoe/Successmgs';
 import SuccesssmgsjLocation from '../screens/SuccsessmgsJoblocations/SuccesssmgsjLocation';
-
+import SuccessfulyUpJob from '../screens/SuccessfulyUpJobtype/SuccessfulyUpJob';
+import successfullyUpLocation from '../screens/SuccessfulyUpLocations/SuccessfullyUpLocation';
+import Deletejobtype from '../screens/DeleteJobtypemsg/Deletejobtype';
+import Deletemgslocation from '../screens/DeleteMgsLocation/Deletemgslocation';
 const Stack  = createNativeStackNavigator();
 const Navigation = () => {
   return (
@@ -46,10 +49,12 @@ const Navigation = () => {
         <Stack.Screen name="VIEW ALL JOBS TYPES" component={ViewJobTypes} ></Stack.Screen>  
         <Stack.Screen name="ADD LOCATIONS" component={AddLocation} ></Stack.Screen>  
         <Stack.Screen name="VIEW ALL LOCATIONS" component={ViewAllLocations} ></Stack.Screen>  
-        <Stack.Screen name="successfully Added! " component={Successmgs} ></Stack.Screen>  
-        <Stack.Screen name="successfully Added!" component={SuccesssmgsjLocation} ></Stack.Screen>  
-
-        
+        <Stack.Screen name="Successfully Added! " component={Successmgs} ></Stack.Screen>  
+        <Stack.Screen name="Successfully Added!" component={SuccesssmgsjLocation} ></Stack.Screen> 
+        <Stack.Screen name="Successfully Updated!" component={SuccessfulyUpJob} ></Stack.Screen>
+        <Stack.Screen name="Successfully Updated! " component={successfullyUpLocation} ></Stack.Screen>
+        <Stack.Screen name="Successfully Deleted!" component={Deletejobtype} ></Stack.Screen>
+        <Stack.Screen name="Successfully Deleted! " component={Deletemgslocation} ></Stack.Screen>
     </Stack.Navigator>
     </NavigationContainer>
   );

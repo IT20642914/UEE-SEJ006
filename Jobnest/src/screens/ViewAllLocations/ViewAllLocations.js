@@ -1,19 +1,45 @@
 /* eslint-disable prettier/prettier */
-import { View, Text,Image ,StyleSheet,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
+import { View, Text,Image ,StyleSheet,ToastAndroid,useWindowDimensions,ImageBackground,ScrollView,TouchableOpacity} from 'react-native'
 
 import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import React,{useState} from 'react'
 import Custuminput from '../../components/Customeinput2/CustomeInput2';
 import { SearchBar } from 'react-native-screens';
+
 const ViewAllLocations = () => {
     const [SearchBar,setSearchBar] =useState('');
   
+    const navigation =useNavigation();
+    const onpressUpdat =()=>{
+       
+       ToastAndroid.show(' Update Request sent successfully!', ToastAndroid.SHORT);
+        navigation.navigate('Successfully Updated! ');
+
+     }
+
+
+     const onpressDelete =()=>{
+      
+      ToastAndroid.show(' Delete Request sent successfully!', ToastAndroid.SHORT);
+       navigation.navigate('Successfully Deleted! ');
+      
+    
+    }
+
+
+
+
+
+
+
+
+
     return (
         <View style={Styles.root}>
         <Text style={Styles.baseText}>View All Locations</Text>
     <View  style={Styles.safe}>
-        <Custuminput   placeholder='Search job types' value={SearchBar} setvalue={setSearchBar} />
+        <Custuminput   placeholder='Search Locations' value={SearchBar} setvalue={setSearchBar} />
         </View>
         <View style={Styles.card}>
     
@@ -24,11 +50,22 @@ const ViewAllLocations = () => {
           <View  style={Styles.datalist}>
     
      
-        <CustomButton text="Update"  type='UPDATE' />
-        <CustomButton text="Delete"  type='DELETE' /></View>
+        <CustomButton text="Update"   onPress={ onpressUpdat}  type='UPDATE' />
+        <CustomButton text="Delete"  onPress={ onpressDelete} type='DELETE'    /></View>
         </View>
         </View>
-    </View></View>
+    </View>
+    
+    
+
+    
+    </View>
+
+
+
+
+
+
       )
     }
     const Styles = StyleSheet.create({
