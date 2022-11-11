@@ -35,7 +35,17 @@ container_PRIMARY:{
 container_TERTIARY:{
   
 },
+container_DELETE:{
+  backgroundColor:'#C21B1B',
+  width:100,height:40,
 
+},
+
+container_UPDATE:{
+  backgroundColor:'#3C8BA5',
+  width:100,height:40,
+
+},
     text:{
         fontWeight:'bold',
         color:'white',

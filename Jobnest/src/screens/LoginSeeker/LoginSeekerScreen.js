@@ -18,7 +18,19 @@ const LoginSeekerScreen = () => {
 
  
  
- 
+ const onForgetpWpress= ()=>{
+  
+  
+  navigation.navigate('ForgetPw');
+
+  
+  }
+
+  const onpressLogin =()=>{
+    navigation.navigate('movetoAdminapanel');
+    
+
+  }
  
  
  
@@ -38,13 +50,12 @@ const LoginSeekerScreen = () => {
         
            
          </ImageBackground>
-         <CustomButton text="Login"  />
-
-         
+         <CustomButton text="Login"    onPress={onpressLogin }
+          />
 
 <CustomButton 
 text="Forgot Password"
-type='TERTIARY'
+type='TERTIARY'   onPress={onForgetpWpress } 
 />
 
 

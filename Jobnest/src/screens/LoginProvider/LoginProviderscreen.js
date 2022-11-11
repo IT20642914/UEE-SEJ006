@@ -17,7 +17,14 @@ const LoginProviderscreen = () => {
  const [email,setEmail] =useState('');
  const [password,setPassword] =useState('');
 
- 
+  
+ const onForgetpWpress= ()=>{
+  
+
+  navigation.navigate('ForgetPw');
+  
+  }
+
  
 
   return (
@@ -41,7 +48,7 @@ const LoginProviderscreen = () => {
 
 <CustomButton 
 text="Forgot Password"
-type='TERTIARY'
+type='TERTIARY' onPress={onForgetpWpress } 
 />
 
 
@@ -78,7 +85,7 @@ type='TERTIARY'
 
  <View style={{marginTop:60,}}>
    
- <TouchableOpacity  style={Styles.touchbl} onPress={()=>{alert("you clicked me")}}>
+ <TouchableOpacity  style={Styles.touchbl} >
        <Text style={Styles.baseTex1} >Dont have a Account </Text>
        <Text  style={Styles.click} >Register </Text>
   

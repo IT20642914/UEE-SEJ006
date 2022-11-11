@@ -20,9 +20,13 @@ import Navigation from './src/navigation';
 
 const App = () => {
   return (
+  
     <SafeAreaView style={styles.root}>
+   
+
+      <Navigation/>
       
-   <Navigation/>
+   
     </SafeAreaView>
   );
 };
