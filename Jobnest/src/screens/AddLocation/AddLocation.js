@@ -12,6 +12,13 @@ import Custuminput from '../../components/Customeinput2/CustomeInput2';
 const AddLocation = () => {
     const [AddLocation,setLocation] =useState('');
     const navigation =useNavigation();
+    
+  const onpressSave =()=>{
+   navigation.navigate('successfully Added!');
+   
+ 
+ }
+
 
   return (
     <View style={Styles.root}>
@@ -19,8 +26,8 @@ const AddLocation = () => {
             <View style={Styles.cardin}>
       
          
-        <Custuminput    placeholder=' Job Location' value={AddLocation} setvalue={setLocation} />
-        <CustomButton text="Save"  />
+        <Custuminput    placeholder=' Add Job Location' value={AddLocation} setvalue={setLocation} />
+        <CustomButton text="Save"   onPress={ onpressSave} />
         </View>
     </View></View>
   

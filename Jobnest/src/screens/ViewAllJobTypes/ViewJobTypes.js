@@ -13,7 +13,7 @@ const ViewJobTypes = () => {
     <View style={Styles.root}>
     <Text style={Styles.baseText}>View All Job Types</Text>
 <View  style={Styles.safe}>
-    <Custuminput   placeholder='Search Locations ' value={SearchBar} setvalue={setSearchBar} />
+    <Custuminput   placeholder='Search job Types ' value={SearchBar} setvalue={setSearchBar} />
     </View>
     <View style={Styles.card}>
 

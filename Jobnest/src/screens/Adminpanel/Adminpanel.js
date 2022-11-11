@@ -41,6 +41,9 @@ const Adminpanel = () => {
   
   }
 
+  
+
+
   return (
     <View>
       

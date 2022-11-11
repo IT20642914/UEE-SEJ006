@@ -7,32 +7,32 @@ import CustomButton from '../../components/CustomButtons/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 import React,{useState,useEffect } from 'react'
 import Custuminput from '../../components/Customeinput2/CustomeInput2';
-
-
-const Addjobs = () => {
-  
+import Logo from '../../../assets/images/facebook.png';
+const Successmgs = () => {
+ 
     const [jobtype,setJobtype] =useState('');
     const navigation =useNavigation();
+    const {Height} = useWindowDimensions();
+    const onpressback =()=>{
+        navigation.navigate('VIEW ALL JOBS TYPES');
 
-    const onpressSave =()=>{
-      navigation.navigate('successfully Added! ');
-      
+      }
     
-    }
   
-
-
-        
-  return (
+    return (
     <View style={Styles.root}>
+    
     <View style={Styles.card}>
             <View style={Styles.cardin}>
-      
-         
-        <Custuminput    placeholder='Add Job Type' value={jobtype} setvalue={setJobtype} />
-        <CustomButton text="Save"  onPress={ onpressSave}  />
+            <Image source={require("../../../assets/images/checkbox-303113.png")}  style={{ margin:10,width:250,height:250,borderRadius:1000}}/>
+            <Text style={Styles.baseTextH}> successfully Added!</Text>
+            <Text style={Styles.baseTextH2}> Your Job  Type  has been added successfully.</Text>
+       
         </View>
-    </View></View>
+        
+    </View>
+    <CustomButton text="Back To View All Job Types"  onPress={ onpressback}  />
+   </View>
   
   )
 }
@@ -68,7 +68,7 @@ const Styles = StyleSheet.create({
         borderWidth:1,
         marginTop:50,
      backgroundColor:'#D9D9DA',
-        height:200,
+        height:400,
         width:'80%',
         alignContent:'center',
         borderRadius:20,
@@ -77,8 +77,22 @@ const Styles = StyleSheet.create({
         justifyContent:'center',
         margin:30,
      }
+    ,  baseTextH:{
+      textAlign:'center',
+      fontSize: 26,
+      color: '#3E4F88',
+       fontWeight: 'bold',
+ 
+    },baseTextH2:{
+textAlign:'center',
+      fontSize: 16,
+      color: '#3E4F88',
+    
+ 
+    },
     
       
    });
 
-export default Addjobs
+
+export default Successmgs

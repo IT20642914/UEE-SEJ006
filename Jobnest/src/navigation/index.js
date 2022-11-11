@@ -21,6 +21,8 @@ import Addjobs from '../screens/Addjobs/Addjobs';
 import ViewJobTypes from '../screens/ViewAllJobTypes/ViewJobTypes';
 import AddLocation from '../screens/AddLocation/AddLocation';
 import ViewAllLocations from '../screens/ViewAllLocations/ViewAllLocations';
+import Successmgs from '../screens/Succsessmgsjobtyoe/Successmgs';
+import SuccesssmgsjLocation from '../screens/SuccsessmgsJoblocations/SuccesssmgsjLocation';
 
 const Stack  = createNativeStackNavigator();
 const Navigation = () => {
@@ -44,6 +46,10 @@ const Navigation = () => {
         <Stack.Screen name="VIEW ALL JOBS TYPES" component={ViewJobTypes} ></Stack.Screen>  
         <Stack.Screen name="ADD LOCATIONS" component={AddLocation} ></Stack.Screen>  
         <Stack.Screen name="VIEW ALL LOCATIONS" component={ViewAllLocations} ></Stack.Screen>  
+        <Stack.Screen name="successfully Added! " component={Successmgs} ></Stack.Screen>  
+        <Stack.Screen name="successfully Added!" component={SuccesssmgsjLocation} ></Stack.Screen>  
+
+        
     </Stack.Navigator>
     </NavigationContainer>
   );
