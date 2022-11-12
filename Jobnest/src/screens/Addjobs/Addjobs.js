@@ -28,6 +28,7 @@ const Addjobs = () => {
         
   return (
     <View style={Styles.root}>
+      <Text style={Styles.baseText}>ADD Job Types </Text>
     <View style={Styles.card}>
             <View style={Styles.cardin}>
       
@@ -48,6 +49,12 @@ const Styles = StyleSheet.create({
    
        alignItems: 'center',
      },
+     baseText:{
+      marginTop:10,
+      paddingRight:240,
+       fontSize: 16,
+       color: '#3E4F88',
+        fontWeight: 'bold',},
      safe:{
         
         justifyContent: "center",
@@ -69,7 +76,7 @@ const Styles = StyleSheet.create({
      card:{
         borderColor:'#3E4F88',
         borderWidth:1,
-        marginTop:50,
+        marginTop:30,
      backgroundColor:'#D9D9DA',
         height:200,
         width:'80%',
@@ -77,10 +84,10 @@ const Styles = StyleSheet.create({
         borderRadius:20,
      },cardin:{
      
-      paddingTop: StatusBar.currentHeight,
+    
         alignContent:'center',
         justifyContent:'center',
-        margin:30,
+        margin:20,
      }
     
       
