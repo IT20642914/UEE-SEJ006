@@ -40,6 +40,11 @@ const Adminpanel = () => {
     
   
   }
+  const onpressAddselfempPost =()=>{
+    navigation.navigate('ADD POST');
+    
+  
+  }
 
   
 
@@ -57,7 +62,7 @@ const Adminpanel = () => {
   <CustomeAdminbtn text="View All Job Types" onPress={ onpressViewalljobTypes} />
   <CustomeAdminbtn text="Add Locations"   onPress={ onpessAddLocations}/>
   <CustomeAdminbtn text="View All Locations" onPress={ onpressViewallLocations}  />
-  <CustomeAdminbtn text="Add Self Employement Post"  />
+  <CustomeAdminbtn text="Add Self Employement Post"    onPress={ onpressAddselfempPost}  />
   <CustomeAdminbtn text="View All  Self Employement Post"  />
  
    

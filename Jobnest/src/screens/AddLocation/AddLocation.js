@@ -24,6 +24,7 @@ const AddLocation = () => {
 
   return (
     <View style={Styles.root}>
+          <Text style={Styles.baseText}>ADD Locations</Text>
     <View style={Styles.card}>
             <View style={Styles.cardin}>
       
@@ -49,7 +50,12 @@ const Styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     } ,
-
+    baseText:{
+      marginTop:10,
+      paddingRight:240,
+       fontSize: 16,
+       color: '#3E4F88',
+        fontWeight: 'bold',},
      title: {
         width: "100%",
         marginTop: 20,
@@ -65,7 +71,7 @@ const Styles = StyleSheet.create({
      card:{
         borderColor:'#3E4F88',
         borderWidth:1,
-        marginTop:50,
+        marginTop:30,
      backgroundColor:'#D9D9DA',
         height:200,
         width:'80%',
