@@ -13,7 +13,7 @@ const LoginSeekerScreen = () => {
 
   const navigation =useNavigation();
   const onsGetStartedPressed= ()=>{
-    navigation.navigate('JobAll');
+  navigation.navigate('JobseekerHome');
 
 }
 

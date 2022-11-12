@@ -15,7 +15,7 @@ const TitelBar = () => {
                             }} ><Image source={Logo} style={[style.logo  ]}  /></TouchableOpacity>
             </View>
             <View style={style.TitelContainer}>
-                <Text style={style.TitelText}>Job Information</Text>
+                <Text style={style.TitelText}>My Applications</Text>
             </View>
         </View>
     )
@@ -28,16 +28,7 @@ const JobListView = ({ ItemList }) => {
     return (
         <View style={style.detailBand}>
 
-            <View style={style.searchView}>
-                <View style={style.searchViewHolder}>
-
-                    
-                    <TextInput placeholder="Search Title" style={style.searchViewInput} />
-                </View>
-            </View>
-
-
-            <View style={{width:wp('100%'), height:hp('90%'),alignItems:'center',justifyContent:'center'}}>
+         <View style={{width:wp('100%'), height:hp('70%'),alignItems:'center',justifyContent:'center'}}>
             <ScrollView>
             {
 
@@ -60,10 +51,7 @@ const JobListView = ({ ItemList }) => {
 
                                                 <Text style={style.infoDetails}>{item.company}</Text>
                                             </View>
-                                            <View style={style.InfoView_row}>
-
-                                                <Text style={style.infoDetails}>{item.mode}</Text>
-                                            </View>
+                                            
 
                                         </View>
                                     </View>
@@ -86,7 +74,7 @@ const JobListView = ({ ItemList }) => {
 
 
 //----------------------------render the app  and data    
-const JobAll = () => {
+const MyApplications = () => {
 
 
 
@@ -100,7 +88,7 @@ const JobAll = () => {
             "id": 1,
             "title": "Software Engineer",
             "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+           
 
 
 
@@ -109,49 +97,48 @@ const JobAll = () => {
             "id": 2,
             "title": "Software Engineer",
             "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
             "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+           
+        },
+        {
+            "id": 2,
+            "title": "Software Engineer",
+            "company": "ABC Company",
+            
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
             "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+           
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
             "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
             "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+          
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
             "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
-
-        },
-        {
-            "id": 2,
-            "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+           
 
         }
     ])
@@ -202,14 +189,14 @@ const style = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         color: '#000',
-       
+        backgroundColor: 'yellow',
     },
 
     detailBand: {
         width: wp('100%'),
         height: hp('85%'),
         alignItems: 'center',
-       
+        backgroundColor: 'grey',
     },
 
     iconcontainer: {
@@ -218,7 +205,7 @@ const style = StyleSheet.create({
         height: hp("10%"),
         alignItems: 'center',
        justifyContent:'center',
-       
+        backgroundColor: 'Red',
     },
     logo: {
         marginLeft:10,
@@ -241,22 +228,21 @@ const style = StyleSheet.create({
         width: wp('100%'),
         height: hp('10%'),
         alignItems: 'center',
-       
+        backgroundColor: 'black',
     },
     searchViewHolder: {
         width: wp('96%'),
         height: hp('8%'),
         alignItems: 'center',
-       
+        backgroundColor: 'yellow',
         flexDirection: 'row',
 
     },
     searchViewInput: {
-        width: wp('96%'),
+        width: wp('75%'),
         borderRadius: 5,
         borderWidth: 1,
-        backgroundColor: 'white',
-      
+        backgroundColor: 'green',
         alignItems: 'center',
     },
     iconView: {
@@ -264,7 +250,7 @@ const style = StyleSheet.create({
         height: hp('7%'),
         alignItems: 'center',
         justifyContent: 'center',
-       
+        backgroundColor: 'pink',
         alignItems: 'center',
     },
     iconContent: {
@@ -278,7 +264,8 @@ const style = StyleSheet.create({
         width: wp('100%'),
         height: hp('15%'),
         alignItems: 'center',
-       
+        backgroundColor: 'orange',
+
 
     },
     itemHolder: {
@@ -289,8 +276,7 @@ const style = StyleSheet.create({
         borderRadius: 5,
         borderWidth: 1,
         margin: 5,
-        backgroundColor: 'white',
-       
+        backgroundColor: 'purple'
     },
     itemWrapper: {
         width: wp('92%'),
@@ -298,7 +284,7 @@ const style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
-       
+        backgroundColor: 'lightblue',
     },
 
 
@@ -307,8 +293,7 @@ const style = StyleSheet.create({
         height: hp('12%'),
         alignItems: 'center',
         justifyContent: 'center',
-       
-      
+        backgroundColor: 'black',
 
     },
     InfoView_row: {
@@ -316,7 +301,7 @@ const style = StyleSheet.create({
         height: hp('3%'),
         alignItems: 'center',
         flexDirection: 'row',
-       
+        backgroundColor: 'white',
 
     },
     InfoView_row_Title: {
@@ -324,7 +309,7 @@ const style = StyleSheet.create({
         height: hp('4%'),
         alignItems: 'center',
         flexDirection: 'row',
-      
+        backgroundColor: 'white',
 
     },
     infoTitle: {
@@ -343,4 +328,4 @@ const style = StyleSheet.create({
 
 });
 
-export default JobAll;
+export default MyApplications;

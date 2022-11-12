@@ -3,7 +3,7 @@
 import {View, Text,TextInput,StyleSheet} from 'react-native';
 import React from 'react';
 
-const Custuminput = ({value,setvalue,placeholder,secureTextEntry}) => {
+const CVInputs = ({value,setvalue,placeholder,secureTextEntry}) => {
   return (
 
     <View style={Styles.Container}>
@@ -22,7 +22,7 @@ const Custuminput = ({value,setvalue,placeholder,secureTextEntry}) => {
 const Styles = StyleSheet.create({
   Container: {
     backgroundColor:'#ffff',
-    height:45,
+    height:100,
     justifyContent:'center',
  
     width:"100%",
@@ -42,7 +42,6 @@ const Styles = StyleSheet.create({
     fontWeight:'bold',
     fontSize:15,
 
-
  
   
   }
@@ -50,4 +49,4 @@ const Styles = StyleSheet.create({
 
 });
 
-export default Custuminput;
+export default CVInputs;

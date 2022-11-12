@@ -15,7 +15,7 @@ const TitelBar = () => {
                             }} ><Image source={Logo} style={[style.logo  ]}  /></TouchableOpacity>
             </View>
             <View style={style.TitelContainer}>
-                <Text style={style.TitelText}>Job Information</Text>
+                <Text style={style.TitelText}>Consulting</Text>
             </View>
         </View>
     )
@@ -32,12 +32,12 @@ const JobListView = ({ ItemList }) => {
                 <View style={style.searchViewHolder}>
 
                     
-                    <TextInput placeholder="Search Title" style={style.searchViewInput} />
+                    <TextInput placeholder="Search Item" style={style.searchViewInput} />
                 </View>
             </View>
 
 
-            <View style={{width:wp('100%'), height:hp('90%'),alignItems:'center',justifyContent:'center'}}>
+            <View style={{width:wp('100%'), height:hp('70%'),alignItems:'center',justifyContent:'center'}}>
             <ScrollView>
             {
 
@@ -46,7 +46,7 @@ const JobListView = ({ ItemList }) => {
                     return (
                         <View style={style.itemContainer}>
                             <TouchableOpacity onPress={()=>{
-                                 navigation.navigate('JobInforScreen');
+                                 navigation.navigate('Consultinginfor');
                             }} >
                                 <View style={style.itemHolder}>
                                     <View style={style.itemWrapper}>
@@ -58,12 +58,9 @@ const JobListView = ({ ItemList }) => {
                                             </View>
                                             <View style={style.InfoView_row}>
 
-                                                <Text style={style.infoDetails}>{item.company}</Text>
+                                                <Text style={style.infoDetails}>{item.Description}</Text>
                                             </View>
-                                            <View style={style.InfoView_row}>
-
-                                                <Text style={style.infoDetails}>{item.mode}</Text>
-                                            </View>
+                                            
 
                                         </View>
                                     </View>
@@ -86,7 +83,7 @@ const JobListView = ({ ItemList }) => {
 
 
 //----------------------------render the app  and data    
-const JobAll = () => {
+const Consulting = () => {
 
 
 
@@ -99,8 +96,8 @@ const JobAll = () => {
         {
             "id": 1,
             "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            "Description": "ABC Description",
+          
 
 
 
@@ -108,50 +105,49 @@ const JobAll = () => {
         {
             "id": 2,
             "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            "Description": "ABC Description",
+           
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            "Description": "ABC Description",
+           
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            "Description": "ABC Description",
+           
+        },
+        {
+            "id": 2,
+            "title": "Software Engineer",
+            "Description": "ABC Description",
+          
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            "Description": "ABC Description",
+          
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            "Description": "ABC Description",
+          
 
         },
         {
             "id": 2,
             "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
-
-        },
-        {
-            "id": 2,
-            "title": "Software Engineer",
-            "company": "ABC Company",
-            "mode": "Remote/On Site/Hybrid",
+            "Description": "ABC Description",
+           
 
         }
     ])
@@ -202,7 +198,7 @@ const style = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         color: '#000',
-       
+      
     },
 
     detailBand: {
@@ -244,7 +240,7 @@ const style = StyleSheet.create({
        
     },
     searchViewHolder: {
-        width: wp('96%'),
+        width: wp('90%'),
         height: hp('8%'),
         alignItems: 'center',
        
@@ -252,11 +248,10 @@ const style = StyleSheet.create({
 
     },
     searchViewInput: {
-        width: wp('96%'),
+        width: wp('92%'),
         borderRadius: 5,
         borderWidth: 1,
-        backgroundColor: 'white',
-      
+       
         alignItems: 'center',
     },
     iconView: {
@@ -289,8 +284,7 @@ const style = StyleSheet.create({
         borderRadius: 5,
         borderWidth: 1,
         margin: 5,
-        backgroundColor: 'white',
-       
+      
     },
     itemWrapper: {
         width: wp('92%'),
@@ -307,7 +301,6 @@ const style = StyleSheet.create({
         height: hp('12%'),
         alignItems: 'center',
         justifyContent: 'center',
-       
       
 
     },
@@ -343,4 +336,4 @@ const style = StyleSheet.create({
 
 });
 
-export default JobAll;
+export default Consulting;

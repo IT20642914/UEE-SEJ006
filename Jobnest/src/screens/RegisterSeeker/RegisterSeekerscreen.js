@@ -16,15 +16,21 @@ const RegisterSeekerscreen = () => {
 
   const navigation =useNavigation();
  
- const [email,setEmail] =useState('');
- const [Username,setusername] =useState('');
- const [ConfirmPw,setConfirmPassword] =useState('');
- const [password,setPassword] =useState('');
+//  const [email,setEmail] =useState('');
+//  const [Username,setusername] =useState('');
+//  const [ConfirmPw,setConfirmPassword] =useState('');
+//  const [password,setPassword] =useState('');
 
  
  
  
  
+
+const onsGetStartedPressed= ()=>{
+navigation.navigate('JobApplication');
+
+}
+
  
  
   return (
@@ -36,14 +42,20 @@ const RegisterSeekerscreen = () => {
     
         <ImageBackground source={Logo} style={[Styles.logo  ,{Height:  Height *0.12}]} resizeMode="cover" >
   
-        <Custuminput    placeholder='UserName' value={email} setvalue={setusername} />
+        {/* <Custuminput    placeholder='UserName' value={email} setvalue={setusername} />
         <Custuminput    placeholder='Email' value={email} setvalue={setEmail} />
         <Custuminput    placeholder='Password' value={email} setvalue={setPassword}   secureTextEntry/>
-        <Custuminput  placeholder=' Confirm Password' value={password} setvalue={setConfirmPassword} secureTextEntry  />
+        <Custuminput  placeholder=' Confirm Password' value={password} setvalue={setConfirmPassword} secureTextEntry  /> */}
+       
+
+        <Custuminput    placeholder='UserName'  />
+        <Custuminput    placeholder='Email'  />
+        <Custuminput    placeholder='Password'    secureTextEntry/>
+        <Custuminput  placeholder=' Confirm Password' secureTextEntry  />
        
           
         </ImageBackground>
-        <CustomButton text="Register"  />
+        <CustomButton text="Register" onPress={onsGetStartedPressed} />
 
         
 
